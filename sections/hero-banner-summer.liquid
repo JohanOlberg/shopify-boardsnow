@@ -1,0 +1,32 @@
+<section id="hero-banner-winter">
+    <div class="content">
+       <div class="hero-banner-winter__content">
+            <h1 class="hero-banner-winter__title">{{ section.settings.title }}</h1>
+            <h3 class="hero-banner-winter__subtitle">{{ section.settings.subtitle }}</h3>
+            <p class="hero-banner-winter__subtitle">{{ section.settings.description }}</p>
+            {% if section.settings.show_button and section.settings.button_url != blank %}
+            <a class="hero-banner-winter__button" href="{{ section.settings.button_url }}">
+                {{ section.settings.button_label }}
+            </a>
+            {% endif %}
+        </div>
+
+   
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero Winter",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Title", "default": "Hero Winter" },
+    { "type": "text", "id": "subtitle", "label": "Subtitle", "default": "Up to 40% off!" },
+    { "type": "text", "id": "description", "label": "Description", "default": "Amazing offers to make your winter the most fun ever." },
+    { "type": "image_picker", "id": "background_image", "label": "Background Image" },
+    { "type": "checkbox", "id": "show_button", "label": "Show Button", "default": true },
+    { "type": "text", "id": "button_label", "label": "Button Text", "default": "Show Offers!" },
+    { "type": "url", "id": "button_url", "label": "Url Button" }
+  ],
+  "presets": [{ "name": "Hero Winter" }]
+}
+{% endschema %}

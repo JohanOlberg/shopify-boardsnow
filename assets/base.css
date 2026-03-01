@@ -4944,3 +4944,39 @@ product-recommendations:has([data-has-recommendations='false']) {
     translate: 0px var(--atc-destination, 0px);
   }
 }
+
+.winter-hero{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+  padding: 64px 24px;
+}
+.hero-banner-winter__content{
+  background-image: url('{{ settings.hero_background_image}}');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.hero-banner-winter__title{
+  font-size: 40px;
+  line-height: 1.1;
+  margin: 0 0 12px;
+}
+.hero-banner-winter__subtitle{
+  font-size: 24px;
+  margin: 0 0 20px;
+  opacity: 0.85;
+}
+
+.hero-banner-winter__description{
+  font-size: 18px;
+  margin: 0 0 20px;
+  opacity: 0.85;
+}
+.hero-banner-winter__button{
+  display: inline-block;
+  padding: 12px 16px;
+  border: 1px solid currentColor;
+  text-decoration: none;
+}
