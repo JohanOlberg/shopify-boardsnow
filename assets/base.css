@@ -4945,19 +4945,15 @@ product-recommendations:has([data-has-recommendations='false']) {
   }
 }
 
-.winter-hero{
+.hero-banner-winter{
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
   align-items: center;
   padding: 64px 24px;
+ text-align: right;  
 }
-.hero-banner-winter__content{
-  background-image: url('{{ settings.hero_background_image}}');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
+
 .hero-banner-winter__title{
   font-size: 40px;
   line-height: 1.1;

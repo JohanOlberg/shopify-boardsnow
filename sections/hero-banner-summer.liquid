@@ -1,17 +1,13 @@
 <section id="hero-banner-winter">
-    <div class="content">
-       <div class="hero-banner-winter__content">
-            <h1 class="hero-banner-winter__title">{{ section.settings.title }}</h1>
-            <h3 class="hero-banner-winter__subtitle">{{ section.settings.subtitle }}</h3>
-            <p class="hero-banner-winter__subtitle">{{ section.settings.description }}</p>
-            {% if section.settings.show_button and section.settings.button_url != blank %}
-            <a class="hero-banner-winter__button" href="{{ section.settings.button_url }}">
-                {{ section.settings.button_label }}
-            </a>
-            {% endif %}
-        </div>
-
-   
+    <div class="hero-banner-winter__content">
+        <h1 class="hero-banner-winter__title">{{ section.settings.title }}</h1>
+        <h3 class="hero-banner-winter__subtitle">{{ section.settings.subtitle }}</h3>
+        <p class="hero-banner-winter__description">{{ section.settings.description }}</p>
+        {% if section.settings.show_button and section.settings.button_url != blank %}
+        <a class="hero-banner-winter__button" href="{{ section.settings.button_url }}">
+            {{ section.settings.button_label }}
+        </a>
+        {% endif %}
     </div>
 </section>
 
@@ -30,3 +26,14 @@
   "presets": [{ "name": "Hero Winter" }]
 }
 {% endschema %}
+
+{% style %}
+  .hero-banner-winter__content {
+    {% if section.settings.background_image != blank %}
+      background-image: url({{ section.settings.background_image | image_url: width: 2000 }});
+    {% endif %}
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+{% endstyle %}
